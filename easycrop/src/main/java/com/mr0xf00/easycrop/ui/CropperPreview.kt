@@ -1,5 +1,6 @@
 package com.mr0xf00.easycrop.ui
 
+import android.util.Log
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.runtime.*
@@ -50,7 +51,8 @@ fun CropperPreview(
             .cropperTouch(
                 region = state.region,
                 onRegion = { state.region = it },
-                touchRad = style.touchRad, handles = style.handles,
+                touchRad = style.touchRad,
+                handles = style.handles,
                 viewMat = viewMat,
                 pending = pendingDrag,
                 onPending = { pendingDrag = it },
@@ -65,10 +67,14 @@ fun CropperPreview(
             }
         }
         with(style) {
-            clipPath(cropPath, ClipOp.Difference) {
+            clipPath(
+                cropPath,
+                ClipOp.Difference
+            ) {
                 drawRect(color = overlayColor)
             }
             drawCropRect(cropRect)
+            Log.d("CropRect", "$cropRect")
         }
     }
 }
