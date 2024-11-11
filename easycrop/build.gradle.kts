@@ -99,18 +99,18 @@ publishing {
             }
         }
     }
-    publications {
-        repositories {
-            maven {
-                name = "oss"
-                url = data.repoUrl
-                credentials {
-                    username = extProperty("ossrh.user")
-                    password = extProperty("ossrh.pass")
-                }
-            }
-        }
-    }
+//    publications {
+//        repositories {
+//            maven {
+//                name = "oss"
+//                url = data.repoUrl
+//                credentials {
+//                    username = extProperty("ossrh.user")
+//                    password = extProperty("ossrh.pass")
+//                }
+//            }
+//        }
+//    }
 }
 
 signing {

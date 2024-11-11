@@ -73,8 +73,8 @@ private val AllHandles = MainHandles + SecondaryHandles
 
 private val DefaultAspectRatios = listOf(
     AspectRatio(1, 1),
-    AspectRatio(16, 9),
-    AspectRatio(4, 3)
+    AspectRatio(9, 16),
+    AspectRatio(3, 4),
 )
 
 /** Creates a [CropperStyle] instance with the default behavior. */
